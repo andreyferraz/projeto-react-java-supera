@@ -17,18 +17,32 @@ const TransactionSearch = ({ onSearch }) => {
   return (
     <Box display="flex" flexDirection="column">
       <TextField
+      label="Data de Início"
         placeholder="Data de Início"
         type="date"
         value={startDate}
         onChange={(e) => setStartDate(e.target.value)}
         sx={{ mb: 2 }}
+        InputLabelProps={{
+            shrink: true,
+            style: {
+              color: '#1976d2', 
+            },
+          }}
       />
       <TextField
+        label="Data de fim"
         placeholder="Data de Fim"
         type="date"
         value={endDate}
         onChange={(e) => setEndDate(e.target.value)}
         sx={{ mb: 2 }}
+        InputLabelProps={{
+            shrink: true,
+            style: {
+              color: '#1976d2', 
+            },
+          }}
       />
       <TextField
         label="Nome do Operador Transacionado"
